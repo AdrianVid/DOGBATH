@@ -1,0 +1,351 @@
+/******************************************************************************************************************
+
+Nombre:   Adrian Vidaurre
+Fecha:    30/11/2022
+Modulo:   Lenguaje de marcas y sistemas de marcas de gestion de la informacion
+Tarea:    LMSGI02 Tarea evaluativa 02
+
+Descripcion:
+Desarrollamos un sitio web con 5 páginas HTML y con su hoja de estilo CSS
+Utilizaremos diferentes métodos de posicionamiento pero sobre todo flexbox con todas sus variantes.
+Introducimos distintos elementos multimedia y enlaces a paginas dentro de nuestro sitio web y paginas externas.
+
+*******************************************************************************************************************/
+/* Empezamos con el selector * para dar unos parametros de manera global a todos los documentos.
+Le daremos un margin y padding 0.
+Utilizaremos la propiedad box-sizing para trabajar el documento como si fuera una caja y que sea mas facil ajustar el margin y padding a partir de ahora.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    /* Usamos la clase :root para referirnos a todos los documentos HTML.
+  En el incluiremos los colores con los que vamos a trabajar y les daremos un nombre para nombrarlos mas facilmente.
+  */
+  :root {
+    --Primary-color: rgb(62, 186, 169);
+    --blanco: rgb(255, 251, 251);
+    --texto: rgb(31, 28, 28);
+  }
+  /* Modificamos la barra de navegacion*/
+  nav {
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    font-size: 25px;
+    background-color: var(--blanco)
+  }
+  /* Con el selector nav a nos referiremos exclusivamente a todos las <a> que hay dentro de la nav. 
+  */
+  nav a {
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(59, 46, 45);
+    padding-left: 30px;
+  }
+  nav a:hover {
+    background-color: var(--Primary-color);
+    color: var(--blanco);
+  }
+  .main {
+    height: 100%;
+    background-color: var(--Primary-color);
+  } 
+  /*Modificamos los titulos y subtitulos
+  Utilizamos medidas relativas para el texto*/
+  .titulo {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: "Courier New", Courier, monospace;
+    color: var(--texto);
+    text-align: center;
+  } 
+  .subtitulo {
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 6px;
+    color: var(--texto);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .tercerTitulo {
+    margin: 15px;
+    font-size: 30px;
+    color: var(--texto);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: solid;
+
+  }
+  .portada {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    background-color: var(--blanco); 
+  }
+  /*Modificamos las imagenes y le damos diferentes etiquetas para darle diferentes valores */
+ .logo {
+    display: block;
+    width: 20%;
+    height: 20%;
+  }
+.imagenPrincipal {
+    display: block;
+    width: 800px;
+    margin: auto;
+}
+.imagenSecundaria {
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+.imagenNoticias {
+  display: block;
+  width: 300px;
+  margin: auto;
+  border: solid  10px var(--blanco);
+}
+.contenedor {
+  margin: auto;
+  background-color: var(--blanco)
+}
+.contenedorLavado {
+  width: 40%;
+  padding: 15px;
+  margin: 30px;
+  background-color: var(--blanco);
+}
+.descripcion {
+    margin: 15px;
+    padding: 20px;
+    background-color: var(--Primary-color);
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 30%;
+}
+.parrafos {
+    margin: 30px;
+    padding: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+}
+.titulares {
+    margin: 40px;
+    padding: 20px;
+    font-size: 2.5em;
+    color: rgb(56, 54, 54);
+    text-align: center;
+}
+.tipos {
+    text-align: center;
+    width: 90%;
+    font-size: 20px;
+    background-color: rgb(236, 237, 240);
+    border-bottom: solid var(--texto);
+    margin: 30px auto 5px;
+    padding: 15px 50px;
+    align-items: center;
+    font-family: "Courier New", Courier, monospace;
+} 
+.lavado {
+    margin: 20px auto;
+    padding: 15px;
+    margin-bottom: 30px;
+    width: 90%;
+    text-align: initial;
+    background-color: var(--Primary-color);
+    border: 20px;
+} 
+dt {
+    margin-top: 10px;
+    padding-top: 20px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: var(--texto);
+}
+/*Seleccionamos a todos los elementos dd de la lista de definición.
+ Modificamos el tamaño de letra y los margenes.
+ */
+dd {
+    font-size: 20px;
+    padding: 8px;
+    width: 90%;
+    margin: auto;
+  }  
+
+  .destipos {
+    display: flex;
+    align-items: center;
+  }
+  .boton {
+    background-color: var(--Primary-color) ;
+    width: 50%;
+    border: none;
+    margin: 20px auto;
+    color: var(--texto);
+    padding: 22px 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  /*Con el hover haremos que al pasar el cursor x encima del boton se cambie el color a amarillo.
+  */
+  .boton:hover {
+    background-color: var(--blanco);
+
+  }
+  /* Nos referimos unicamente a los <a> que esten dentro de la clase .boton.
+  Cambiaremos el tipo de letra y su color
+  */
+  .boton a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--texto);
+  }
+
+.noticias {
+    display: flex;
+    justify-content: space-around;
+   
+}
+  .noticia {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(206, 206, 206);
+    flex-direction: column;
+    width: 25%;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--texto);
+  }
+  .e-mail {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    background-color: var(--Primary-color);
+    margin: 30px;
+    color: var(--texto);
+    display: inline-block;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .e-mail:hover {
+    transform: translateY(0) scale(1.2);
+  }
+  form {
+    background-color: rgb(246, 245, 245) ;
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+  }
+  .formulario {
+    border: 4px solid rgb(194, 75, 20);
+  }
+  .titulo__datos {
+    margin: 40px;
+    border-radius: 6px;
+    color: var(--texto);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .informacion__personal {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: inherit;
+  }
+  .tipo__datos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 70%;
+    margin: auto;
+    padding: 15px 30px;
+    align-items: center;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .dato__formulario {
+    padding: 10px;
+    font-size: 20px;
+  }
+  .genero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: flex-start;
+  }
+  .fecha__genero {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+  }
+  .subdato__formulario {
+    font-family: "Times New Roman", Times, serif;
+    padding: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  .informacion {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .input__formulario {
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    width: max-content;
+    background-color: var(192, 190, 190);
+  }
+  .input__formulario:focus {
+    background-color: var(192, 190, 190);
+  }
+  .input__nombre {
+    width: 48%;
+  }
+  
+  .informacion__curso {
+    display: flex;
+    flex-direction: column;
+  }
+  .comentarios {
+    text-align: center;
+  }
+  textarea {
+    width: 100%;
+    padding: 10px;
+    height: 8em;
+    text-align: left;
+    background-color: var(192, 190, 190);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .enviar {
+    margin-top: 30px;
+    padding: 30px;
+  }
+
+  .productos {
+    display: flex;
+      text-align: center;
+      border: solid;
+      font-size: 20px;
+      border-bottom: solid var(--texto);
+      margin: 30px auto 5px;
+      padding: 15px 50px;
+      align-items: center;
+      font-family: "Courier New", Courier, monospace;
+  }

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estilo.css" />
+    <title>Noticias</title>
+  </head>
+  <body>
+    <section class="main">
+    <header>
+      <nav>
+        <a href="./Index.html">Inicio</a>
+        <a href="./lavados.html">Lavados</a>
+        <a href="./noticias.html">Noticias</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+    </header>
+
+    
+      <section class="portada">
+      <img class="logo" src="./imagenes/logotipo.webp" />
+      <h1 class="titulo">EL LAVADERO DE ADRIAN</h1></section>
+      <h3 class="subtitulo">CONTACTO</h3>
+      <form>
+        <form action="./Acontacto.html" method="post">
+            <div class="formulario">
+              <div class="informacion__personal">
+                <h3 class="titulo__datos">Informacion personal</h3>
+    
+                <div class="tipo__datos">
+                  <input
+                    class="input__formulario input__nombre"
+                    type="text"
+                    id="nombre"
+                    placeholder="Nombre"
+                  />
+                  <input
+                    class="input__formulario input__nombre"
+                    type="text"
+                    id="apellido"
+                    placeholder="Apellidos"
+                  />
+                </div>
+    
+                <div class="tipo__datos">
+                  <input
+                    class="input__formulario input__nombre"
+                    type="text"
+                    id="poblacion"
+                    placeholder="Poblacion"
+                  />
+                  <input
+                    class="input__formulario input__nombre"
+                    type="text"
+                    id="cp"
+                    placeholder="Codigo Postal"
+                  />
+                </div>
+                <div class="tipo__datos">
+                  <input
+                    class="input__formulario input__nombre"
+                    type="tel"
+                    id="telefono"
+                    placeholder="Telefono"
+                  />
+    
+                  <input
+                    class="input__formulario input__nombre"
+                    type="email"
+                    id="email"
+                    placeholder="E-mail"
+                  />
+                </div>
+    
+              <h3 class="titulo__datos">Reserva tu lavado</h3>
+              <div class="informacion__curso">
+                <div class="tipo__datos informacion">
+                    
+                  <label for="modelo" class="dato__formulario">Tipo de lavado</label>
+                  <select class="input__formulario" name="tipos" id="modelo">
+                    <option>Básico</option>
+                    <option>Intermedio</option>
+                    <option>Impoluto</option>
+                  </select>
+                </div>
+                <div class="tipo__datos informacion">
+                  <label for="Mascota" class="dato__formulario">Mascota</label>
+                  <input
+                    class="input__formulario"
+                    type="text"
+                    id="Mascota"
+                    placeholder="Nombre de tu perro"
+                  />
+                  <label for="fecha" class="dato__formulario">Fecha</label>
+                   <input class="input__formulario" type="date" id="edad" />
+                </div>
+    
+                <div class="tipo__datos informacion">
+                  <label class="dato__formulario">Tamaño de tu perro</label>
+                  <div class="herramients">
+                    <input type="checkbox" id="tamaño1" name="tamaños" />
+                    <label for="tamaño1" class="subdato__formulario">
+                      Pequeño</label
+                    >
+                    <div class="herramients">
+                      <input
+                        type="checkbox"
+                        id="tamaño2"
+                        name="tamaños"
+                      />
+                      <label for="tamaño2" class="subdato__formulario">
+                        Mediano</label
+                      >
+                    </div>
+                    <div class="herramients">
+                      <input
+                        type="checkbox"
+                        id="tamaño3"
+                        name="tamaños"
+                      />
+                      <label for="tamaño3" class="subdato__formulario">
+                        Grande</label
+                      >
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="comentarios">
+                  <h3 class="titulo__datos">Comentarios</h3>
+    
+                  <div class="tipo__datos">
+                    <textarea
+                      id="msg"
+                      name="user_message"
+                      placeholder="Déjanos un comentario o preguntanos las dudas que puedas tener..."
+                    ></textarea>
+                  </div>
+                  <div class="enviar">
+                    <input type="submit" class="dato__formulario" value="Enviar" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </main>
+    
+      </form>
+    </section>
+  </body>
+</html>
